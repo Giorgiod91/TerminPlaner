@@ -5,6 +5,9 @@ public class Termin {
 	private String description;
 	private int due_date;
 	
+	
+	private int stufe;
+	
 	// Constructor
 	public Termin(String title, String description, int due_date) {
 		super();
@@ -58,9 +61,25 @@ public class Termin {
 	
 	//methods
 	
-	public void setDringlichkeit() {
-		
-	}
+	public String setDringlichkeit(int stufe) {
+		String neue_stufe = "";
+		if(stufe !=0) {
+			switch(stufe) {
+			case 1:
+				neue_stufe = "grün";
+				break;
+			case 2:
+				neue_stufe = "gelb";
+				break;
+			case 3:
+				neue_stufe = "rot";
+				break;
+			default:
+				break;
+			}
+		}
+		return neue_stufe;
+		}
 	
 	
 	
