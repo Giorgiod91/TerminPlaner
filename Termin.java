@@ -64,6 +64,7 @@ public class Termin {
 	 */
 	public String setDringlichkeit(int stufe) {
 		String neue_stufe = "";
+		// nur wenn die übergebene Stufe auch größer ist als die interne festgelegte Stufe (MIN_STUFE als Konstante)
 		if (stufe > MIN_STUFE) {
 			switch (stufe) {
 				case 1:
