@@ -81,5 +81,20 @@ public class Termin {
 		}
 		return neue_stufe;
 	}
+	
+	
+	
+	// Funktion um neu Termine anzulegen
+	/**
+	 * 
+	 * @param title
+	 * @param description
+	 * @param due_date
+	 * @return
+	 */
+	public Termin hinzufuegen(String title, String description, int due_date) {
+	    Termin neuerTermin = new Termin(title, description, due_date);
+	    return neuerTermin;
+	}
 
 }
