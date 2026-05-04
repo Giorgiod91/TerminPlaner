@@ -98,4 +98,30 @@ public class Termin {
 	    return neuerTermin;
 	}
 
-}
+
+	/**
+	 * 
+	 * @param title
+	 * @param Termine
+	 * @return gibt das Termin Array zurück mit dem entfernten Termin
+	 */	
+	public Termin[] entfernen(String title, Termin[] Termine){
+		// Temporäres array mit einer Stelle weniger
+		Termin[] temp = new Termin[Termine.length- 1];
+		int index = 0;
+		for (Termin ziel : Termine){
+			// wenn der Termin gefunden wurde
+			if(!ziel.getTitle().equals(title)){
+			    // dann setze an den aktuellen index des Temp Arrays den Termin
+				temp[index]= ziel;
+				// zähle index hoch
+				index++;
+			}
+		}
+		// gebe das temp array zurück
+		return temp;
+		}
+
+	}
+
+
